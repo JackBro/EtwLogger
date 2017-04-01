@@ -1,0 +1,5 @@
+E:\GIT\ETWLogger\EtwLogger\obj\Debug\EtwLogger.csprojResolveAssemblyReference.cache
+E:\GIT\ETWLogger\EtwLogger\bin\Debug\EtwLogger.dll
+E:\GIT\ETWLogger\EtwLogger\bin\Debug\EtwLogger.pdb
+E:\GIT\ETWLogger\EtwLogger\obj\Debug\EtwLogger.dll
+E:\GIT\ETWLogger\EtwLogger\obj\Debug\EtwLogger.pdb
