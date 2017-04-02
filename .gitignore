@@ -3,3 +3,6 @@
 ################################################################################
 
 /EtwLogger/bin/Debug
+/EtwLogger/obj/Debug
+/EtwLoggerConsoleTest/bin/Debug
+/EtwLoggerConsoleTest/obj/Debug

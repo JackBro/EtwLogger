@@ -71,7 +71,7 @@ namespace EtwLogger.Logger
         public bool Start()
         {
             EtwLogger.EtwLoggerEventListener = new EtwLoggerEventListener(_logPath, _filename, "txt", false);
-            EtwLogger.IsSqlEnabled = _useSqlAppender;
+            EtwLog.IsSqlEnabled = _useSqlAppender;
             if (EtwLogger.IsSqlEnabled)
             {
                 EtwLogger.EtwSqlLoggerEventListener = new EtwLoggerEventListener(_logPath, _filename, "sql", true);
@@ -86,17 +86,9 @@ namespace EtwLogger.Logger
             SetLevel(minLevel);
             EtwLogger.EtwLoggerEventListener.EnableEvents(EtwLoggerEventSource.Log, minLevel);
 
-            // Default SMTP Settings
-            EtwLogger.SmtpHost = "smtphost.test.com";
-            EtwLogger.Port = 25;
-            EtwLogger.EnableSsl = false;
-
             var asyncLoggingDisabled = ConfigurationManager.AppSettings["AsyncLoggingDisabled"].ToBool(false);
             EtwLogger.EtwLoggerEventListener.IsAsyncLoggingDisabled = asyncLoggingDisabled;
             if (EtwLogger.IsSqlEnabled) EtwLogger.EtwSqlLoggerEventListener.IsAsyncLoggingDisabled = asyncLoggingDisabled;
-
-            EtwLogger.LogToFileWhenSendingEmail = ConfigurationManager.AppSettings["LogToFileWhenSendingEmail"].ToBool(true);
-
             return true;
         }
         #endregion
@@ -111,7 +103,7 @@ namespace EtwLogger.Logger
         {
             switch (eventType)
             {
-                case "DEBUG":
+                case "VERBOSE":
                     return EventLevel.Verbose;
                 case "INFO":
                     return EventLevel.Informational;
@@ -119,7 +111,7 @@ namespace EtwLogger.Logger
                     return EventLevel.Warning;
                 case "ERROR":
                     return EventLevel.Error;
-                case "FATAL":
+                case "CRITICAL":
                     return EventLevel.Critical;
                 default:
                     return EventLevel.Verbose;

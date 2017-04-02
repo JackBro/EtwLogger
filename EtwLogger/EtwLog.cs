@@ -121,53 +121,6 @@ namespace EtwLogger
         }
 
         /// <summary>
-        /// Gets or sets the SMTP host.
-        /// </summary>
-        /// <value>
-        /// The SMTP host.
-        /// </value>
-        public static string SmtpHost
-        {
-            get { return Logger.EtwLogger.SmtpHost; }
-            set { Logger.EtwLogger.SmtpHost = value; }
-        }
-        /// <summary>
-        /// Gets or sets the port.
-        /// </summary>
-        /// <value>
-        /// The port.
-        /// </value>
-        public static int Port
-        {
-            get { return Logger.EtwLogger.Port; }
-            set { Logger.EtwLogger.Port = value; }
-        }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether [enable SSL].
-        /// </summary>
-        /// <value>
-        ///   <c>true</c> if [enable SSL]; otherwise, <c>false</c>.
-        /// </value>
-        public static bool EnableSsl
-        {
-            get { return Logger.EtwLogger.EnableSsl; }
-            set { Logger.EtwLogger.EnableSsl = value; }
-        }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether [log to file when sending email].
-        /// </summary>
-        /// <value>
-        /// <c>true</c> if [log to file when sending email]; otherwise, <c>false</c>.
-        /// </value>
-        public static bool LogToFileWhenSendingEmail
-        {
-            get { return Logger.EtwLogger.LogToFileWhenSendingEmail; }
-            set { Logger.EtwLogger.LogToFileWhenSendingEmail = value; }
-        }
-
-        /// <summary>
         /// Gets or sets a value indicating whether [is desk top application].
         /// </summary>
         /// <value>

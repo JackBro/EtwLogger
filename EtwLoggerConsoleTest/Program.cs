@@ -33,7 +33,6 @@ namespace EtwLoggerConsoleTest
         static void Main(string[] args)
         {
             var etwLoggerFactory = new EtwLoggerFactory(System.IO.Directory.GetCurrentDirectory(), "TestLog", true);
-            EtwLog.IsSqlEnabled = true;
             etwLoggerFactory.Start();
 
             EtwLog.Sql("test sql");
