@@ -324,15 +324,15 @@ namespace EtwLogger.Logger
             Console.ResetColor();
             switch (etwLoggerEventListenerData.Level)
             {
-                case "DEBUG":
+                case "VERBOSE":
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.ForegroundColor = ConsoleColor.Green;
                     break;
-                case "INFO":
+                case "INFORMATIONAL":
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
-                case "WARN":
+                case "WARNING":
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     break;
@@ -340,7 +340,7 @@ namespace EtwLogger.Logger
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.ForegroundColor = ConsoleColor.Gray;
                     break;
-                case "FATAL":
+                case "CRITICAL":
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.ForegroundColor = ConsoleColor.White;
                     break;

@@ -35,11 +35,15 @@ namespace EtwLoggerConsoleTest
             var etwLoggerFactory = new EtwLoggerFactory(System.IO.Directory.GetCurrentDirectory(), "TestLog", true);
             etwLoggerFactory.Start();
 
-            EtwLog.Sql("test sql");
+            EtwLog.Sql("select * from Orders");
             EtwLog.Verbose($"This is debug log at {DateTime.UtcNow}");
+            EtwLog.Info($"This is information log at {DateTime.UtcNow}");
             EtwLog.Warn($"This is warning log at {DateTime.UtcNow}");
             EtwLog.Error($"This is error log at {DateTime.UtcNow}");
             EtwLog.Critical($"This is critical log at {DateTime.UtcNow}");
+
+            Console.Write("Press any key to exit...");
+            Console.ReadKey();
             EtwLog.Exit();
         }
     }
